@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Captura os parâmetros na URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Lista dos nomes dos campos do formulário
+        const camposFormulario = [
+            "nome",
+            "data-partida",
+            "numero-passageiros",
+            "destino",
+            "email",
+            "telefone",
+            "refeicao",
+            "assento",
+            "cartao-credito",
+            "upload-passaporte",
+            "preferencias-servico"
+        ];
+
+        // Itera sobre os campos e exibe seus valores no console
+        for (const campo of camposFormulario) {
+            if (urlParams.has(campo)) {
+                console.log(`Campo: ${campo}, Valor: ${urlParams.get(campo)}`);
+            }
+        }
+    </script>
+</body>
+</html>

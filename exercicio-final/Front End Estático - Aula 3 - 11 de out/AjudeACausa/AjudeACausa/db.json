@@ -1,0 +1,58 @@
+{
+  "registrations" : [
+    {
+      "id": 1,
+      "name": "Jeferson Silva",
+      "age": 25,
+      "email": "jeferson@gmail.com",
+      "size": "GG",
+      "category": "3RUN",
+      "donation": 300.50
+    },
+    {
+      "id": 2,
+      "name": "Maria Santos",
+      "age": 30,
+      "email": "maria@gmail.com",
+      "size": "M",
+      "category": "5RUN",
+      "donation": 150.75
+    },
+    {
+      "id": 3,
+      "name": "Carlos Oliveira",
+      "age": 28,
+      "email": "carlos@gmail.com",
+      "size": "G",
+      "category": "4WALK",
+      "donation": 75.00
+  },
+  {
+      "id": 4,
+      "name": "Ana Souza",
+      "age": 22,
+      "email": "ana@gmail.com",
+      "size": "P",
+      "category": "3RUN",
+      "donation": 200.25
+    },
+    {
+      "id": 5,
+      "name": "João Pereira",
+      "age": 35,
+      "email": "joao@gmail.com",
+      "size": "XG",
+      "category": "5RUN",
+      "donation": 120.00
+    },
+    {
+      "id": 6,
+      "name": "Luisa Mendes",
+      "age": 29,
+      "email": "luisa@gmail.com",
+      "size": "GG",
+      "category": "4WALK",
+      "donation": 90.50
+    }
+  ]
+}
