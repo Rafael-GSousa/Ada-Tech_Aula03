@@ -1,108 +1,110 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Formulário de Reserva</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Formulário de Reserva</h1>
-    <form action="formResponse.html" method="post">
-
-        <!-- Cenário 1: Nome Completo -->
-        <fieldset>
-            <legend>Informações Pessoais</legend>
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" required>
-        </fieldset>
-
-        <!-- Cenário 2: Data de Partida -->
-        <fieldset>
-            <legend>Detalhes da Viagem</legend>
-            <label for="data-partida">Data de Partida:</label>
-            <input type="date" id="data-partida" name="data-partida" required>
-        </fieldset>
-
-        <!-- Cenário 3: Número de Passageiros -->
-        <fieldset>
-            <legend>Detalhes da Viagem</legend>
-            <label for="numero-passageiros">Número de Passageiros:</label>
-            <input type="number" id="numero-passageiros" name="numero-passageiros" required>
-        </fieldset>
-
-        <!-- Cenário 8: Destino da Viagem (Select Múltiplo) -->
-        <fieldset>
-            <legend>Detalhes da Viagem</legend>
-            <label for="destino">Destino da Viagem:</label>
-            <select id="destino" name="destino" multiple>
-                <option value="Paris">Paris</option>
-                <option value="Londres">Londres</option>
-                <option value="Nova York">Nova York</option>
-                <option value="Tóquio">Tóquio</option>
-            </select>
-        </fieldset>
-
-        <!-- Cenário 5: Endereço de E-mail -->
-        <fieldset>
-            <legend>Informações de Contato</legend>
-            <label for="email">Endereço de E-mail:</label>
-            <input type="email" id="email" name="email" required>
-        </fieldset>
-
-        <!-- Cenário 7: Número de Telefone de Contato -->
-        <fieldset>
-            <legend>Informações de Contato</legend>
-            <label for="telefone">Número de Telefone de Contato:</label>
-            <input type="tel" id="telefone" name="telefone" required>
-        </fieldset>
-
-        <!-- Cenário 6: Tipo de Refeição (Radio Buttons) -->
-        <fieldset>
-            <legend>Preferências de Refeição</legend>
-            <label>Tipo de Refeição:</label>
-            <input type="radio" id="vegetariana" name="refeicao" value="vegetariana">
-            <label for="vegetariana">Vegetariana</label>
-            <input type="radio" id="sem-gluten" name="refeicao" value="sem-gluten">
-            <label for="sem-gluten">Sem Glúten</label>
-            <input type="radio" id="padrao" name="refeicao" value="padrao">
-            <label for="padrao">Padrão</label>
-        </fieldset>
-
-        <!-- Cenário 9: Preferência de Assento (Checkboxes) -->
-        <fieldset>
-            <legend>Preferência de Assento</legend>
-            <label for="janela">Janela</label>
-            <input type="checkbox" id="janela" name="assento[]" value="janela">
-            <label for="corredor">Corredor</label>
-            <input type="checkbox" id="corredor" name="assento[]" value="corredor">
-            <label for="saida-emergencia">Próximo à Saída de Emergência</label>
-            <input type="checkbox" id="saida-emergencia" name="assento[]" value="saida-emergencia">
-        </fieldset>
-
-        <!-- Cenário 10: Detalhes do Cartão de Crédito -->
-        <fieldset>
-            <legend>Pagamento</legend>
-            <label for="cartao-credito">Detalhes do Cartão de Crédito:</label>
-            <input type="text" id="cartao-credito" name="cartao-credito" required>
-        </fieldset>
-
-        <!-- Cenário 11: Upload de Passaporte -->
-        <fieldset>
-            <legend>Documentos</legend>
-            <label for="upload-passaporte">Cópia Digitalizada do Passaporte:</label>
-            <input type="file" id="upload-passaporte" name="upload-passaporte">
-        </fieldset>
-
-        <!-- Cenário 12: Preferências de Serviço (Select Múltiplo) -->
-        <fieldset>
-            <legend>Preferências de Serviço Adicionais</legend>
-            <label for="preferencias-servico">Escolha as opções desejadas:</label>
-            <select id="preferencias-servico" name="preferencias-servico" multiple>
-                <option value="servico-quarto">Serviço de Quarto</option>
-                <option value="traslado-aeroporto">Traslado do Aeroporto</option>
-                <option value="passeios-adicionais">Passeios Turísticos Adicionais</option>
-            </select>
-        </fieldset>
-
-        <input type="submit" value="Enviar Reserva">
-    </form>
+    <header>
+        <div class="header">
+            <h1>Agência ✈️ TravelMundo</h1>
+            <div class="logo"><img src="./logo.jpeg" alt=""></div>
+        </div>
+    </header>
+    <main>
+        <div style="width: 800px; margin: 0px auto;">
+            <h2>Formulário de Reserva</h2>
+            <form action="http://localhost:3000/resgistrations" method="post">
+                <div class="info-pessoais">
+                    <fieldset>
+                        <legend>Informações Pessoais</legend>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </fieldset>
+                </div>
+                <div class="detalhes-viagem">
+                    <fieldset>
+                        <legend>Detalhes da Viagem</legend>
+                        <label for="data-partida">Data de Partida:</label>
+                        <input type="date" id="data-partida" name="data-partida" required>
+                        <label for="numero-passageiros">Número de Passageiros:</label>
+                        <input type="number" id="numero-passageiros" name="numero-passageiros" required>
+                        <label for="destino">Destino da Viagem:</label>
+                        <select id="destino" name="destino" multiple>
+                            <option value="Paris">Paris</option>
+                            <option value="Londres">Londres</option>
+                            <option value="Nova York">Nova York</option>
+                            <option value="Tóquio">Tóquio</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="contato">
+                    <fieldset>
+                        <legend>Informações de Contato</legend>
+                        <label for="email">Endereço de E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="telefone">Número de Telefone de Contato:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </fieldset>
+                </div>
+                <div class="refeicao">
+                    <fieldset>
+                        <legend>Preferências de Refeição</legend>
+                        <label>Tipo de Refeição:</label>
+                        <input type="radio" id="vegetariana" name="refeicao" value="vegetariana">
+                        <label for="vegetariana">Vegetariana</label>
+                        <input type="radio" id="sem-gluten" name="refeicao" value="sem-gluten">
+                        <label for="sem-gluten">Sem Glúten</label>
+                        <input type="radio" id="padrao" name="refeicao" value="padrao">
+                        <label for="padrao">Padrão</label>
+                    </fieldset>
+                </div>
+                <div class="assento">
+                    <fieldset>
+                        <legend>Preferência de Assento</legend>
+                        <label for="janela">Janela</label>
+                        <input type="checkbox" id="janela" name="assento[]" value="janela">
+                        <label for="corredor">Corredor</label>
+                        <input type="checkbox" id="corredor" name="assento[]" value="corredor">
+                        <label for="saida-emergencia">Próximo à Saída de Emergência</label>
+                        <input type="checkbox" id="saida-emergencia" name="assento[]" value="saida-emergencia">
+                    </fieldset>
+                </div>
+                <div class="pagamento">
+                    <fieldset>
+                        <legend>Pagamento</legend>
+                        <label for="cartao-credito">Detalhes do Cartão de Crédito:</label>
+                        <input type="text" id="cartao-credito" name="cartao-credito" required>
+                    </fieldset>
+                </div>
+                <div class="documentos">
+                    <fieldset>
+                        <legend>Documentos</legend>
+                        <label for="upload-passaporte">Cópia Digitalizada do Passaporte:</label>
+                        <input type="file" id="upload-passaporte" name="upload-passaporte">
+                    </fieldset>
+                </div>
+                <div class="adicionais">
+                    <fieldset>
+                        <legend>Preferências de Serviço Adicionais</legend>
+                        <label for="preferencias-servico">Escolha as opções desejadas:</label>
+                        <select id="preferencias-servico" name="preferencias-servico" multiple>
+                            <option value="servico-quarto">Serviço de Quarto</option>
+                            <option value="traslado-aeroporto">Traslado do Aeroporto</option>
+                            <option value="passeios-adicionais">Passeios Turísticos Adicionais</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="btn">
+                    <input type="submit" value="Enviar Reserva">
+                    <input type="reset" value="Limpar Formulário">
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
+
 </html>

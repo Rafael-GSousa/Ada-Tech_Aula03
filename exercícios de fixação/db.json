@@ -1,0 +1,32 @@
+{
+  "resgistrations": [
+    {
+      "nome": "Rafael",
+      "data-partida": "2023-10-27",
+      "numero-passageiros": "2",
+      "destino": "Londres",
+      "email": "rafael@rafa.com",
+      "telefone": "11999999999",
+      "refeicao": "vegetariana",
+      "assento[]": "corredor",
+      "cartao-credito": "1234567891234567",
+      "upload-passaporte": "",
+      "preferencias-servico": "traslado-aeroporto",
+      "id": 1
+    },
+    {
+      "nome": "Rafael",
+      "data-partida": "2023-10-27",
+      "numero-passageiros": "2",
+      "destino": "Londres",
+      "email": "rafael@rafa.com",
+      "telefone": "11999999999",
+      "refeicao": "vegetariana",
+      "assento[]": "corredor",
+      "cartao-credito": "1234567891234567",
+      "upload-passaporte": "enunciados.md",
+      "preferencias-servico": "traslado-aeroporto",
+      "id": 2
+    }
+  ]
+}
