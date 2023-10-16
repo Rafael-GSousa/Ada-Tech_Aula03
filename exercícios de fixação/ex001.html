@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
-
+    <html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Reserva</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -15,87 +17,134 @@
         </div>
     </header>
     <main>
-        <div style="width: 800px; margin: 0px auto;">
+        <div class="formulario">
             <h2>Formulário de Reserva</h2>
-            <form action="http://localhost:3000/resgistrations" method="post">
+            <form action="formResponse.html" method="get">
                 <div class="info-pessoais">
                     <fieldset>
                         <legend>Informações Pessoais</legend>
-                        <label for="nome">Nome Completo:</label>
-                        <input type="text" id="nome" name="nome" required>
+                        <div class="dados">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="detalhes-viagem">
                     <fieldset>
                         <legend>Detalhes da Viagem</legend>
-                        <label for="data-partida">Data de Partida:</label>
-                        <input type="date" id="data-partida" name="data-partida" required>
-                        <label for="numero-passageiros">Número de Passageiros:</label>
-                        <input type="number" id="numero-passageiros" name="numero-passageiros" required>
-                        <label for="destino">Destino da Viagem:</label>
-                        <select id="destino" name="destino" multiple>
-                            <option value="Paris">Paris</option>
-                            <option value="Londres">Londres</option>
-                            <option value="Nova York">Nova York</option>
-                            <option value="Tóquio">Tóquio</option>
-                        </select>
+                        <div class="dados">
+                            <label for="data-partida">Data de Partida:</label>
+                            <input type="date" id="data-partida" name="data-partida" required>
+                        </div>
+                        <div class="dados">
+                            <label for="numero-passageiros">Número de Passageiros:</label>
+                            <input type="number" id="numero-passageiros" name="numero-passageiros" required>
+                        </div>
+                        <div class="dados">
+                            <div class="select-label"><label for="origem">País de Origem:</label></div>
+                            <div class="select">
+                                <select id="origem" name="origem">
+                                    <option value="França">França</option>
+                                    <option value="Inglaterra">Inglaterra</option>
+                                    <option value="EUA">Estados Unidos</option>
+                                    <option value="Japao">Japão</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dados">
+                            <label for="destino">Destino da Viagem:</label>
+                            <select id="destino" name="destino">
+                                <option value="" selected disabled>Escolha seu Destino</option>
+                                <option value="Paris">Paris</option>
+                                <option value="Londres">Londres</option>
+                                <option value="Nova York">Nova York</option>
+                                <option value="Tóquio">Tóquio</option>
+                            </select>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="contato">
                     <fieldset>
                         <legend>Informações de Contato</legend>
-                        <label for="email">Endereço de E-mail:</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="telefone">Número de Telefone de Contato:</label>
-                        <input type="tel" id="telefone" name="telefone" required>
+                        <div class="dados">
+                            <label for="email">Endereço de E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="dados">
+                            <label for="telefone">Número de Telefone de Contato:</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="refeicao">
                     <fieldset>
-                        <legend>Preferências de Refeição</legend>
-                        <label>Tipo de Refeição:</label>
-                        <input type="radio" id="vegetariana" name="refeicao" value="vegetariana">
-                        <label for="vegetariana">Vegetariana</label>
-                        <input type="radio" id="sem-gluten" name="refeicao" value="sem-gluten">
-                        <label for="sem-gluten">Sem Glúten</label>
-                        <input type="radio" id="padrao" name="refeicao" value="padrao">
-                        <label for="padrao">Padrão</label>
+                        <legend>Tipo de Refeição</legend>
+                        <div class="rf">
+                            <div class="dados">
+                                <input type="radio" id="vegetariana" name="refeicao" value="vegetariana">
+                                <label for="vegetariana">Vegetariana</label>
+                            </div>
+                            <div class="dados">
+                                <input type="radio" id="sem-gluten" name="refeicao" value="sem-gluten">
+                                <label for="sem-gluten">Sem Glúten</label>
+                            </div>
+                            <div class="dados">
+                                <input type="radio" id="padrao" name="refeicao" value="padrao">
+                                <label for="padrao">Padrão</label>
+                            </div>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="assento">
                     <fieldset>
                         <legend>Preferência de Assento</legend>
-                        <label for="janela">Janela</label>
-                        <input type="checkbox" id="janela" name="assento[]" value="janela">
-                        <label for="corredor">Corredor</label>
-                        <input type="checkbox" id="corredor" name="assento[]" value="corredor">
-                        <label for="saida-emergencia">Próximo à Saída de Emergência</label>
-                        <input type="checkbox" id="saida-emergencia" name="assento[]" value="saida-emergencia">
+                        <div class="rf">
+                            <div class="dados">
+                                <input type="checkbox" id="janela" name="assento" value="janela">
+                                <label for="janela">Janela</label>
+                            </div>
+                            <div class="dados">
+                                <input type="checkbox" id="corredor" name="assento" value="corredor">
+                                <label for="corredor">Corredor</label>
+                            </div>
+                            <div class="dados">
+                                <input type="checkbox" id="saida-emergencia" name="assento" value="saida-emergencia">
+                                <label for="saida-emergencia">Próximo à Saída de Emergência</label>
+                            </div>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="pagamento">
                     <fieldset>
                         <legend>Pagamento</legend>
-                        <label for="cartao-credito">Detalhes do Cartão de Crédito:</label>
-                        <input type="text" id="cartao-credito" name="cartao-credito" required>
+                        <div class="dados">
+                            <label for="cartao-credito">Detalhes do Cartão de Crédito:</label>
+                            <input type="text" id="cartao-credito" name="cartao-credito" required>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="documentos">
                     <fieldset>
                         <legend>Documentos</legend>
-                        <label for="upload-passaporte">Cópia Digitalizada do Passaporte:</label>
-                        <input type="file" id="upload-passaporte" name="upload-passaporte">
+                        <div class="dados">
+                            <label for="upload-passaporte">Cópia Digitalizada do Passaporte:</label>
+                            <input type="file" id="upload-passaporte" name="upload-passaporte">
+                        </div>
                     </fieldset>
                 </div>
                 <div class="adicionais">
                     <fieldset>
-                        <legend>Preferências de Serviço Adicionais</legend>
-                        <label for="preferencias-servico">Escolha as opções desejadas:</label>
-                        <select id="preferencias-servico" name="preferencias-servico" multiple>
-                            <option value="servico-quarto">Serviço de Quarto</option>
-                            <option value="traslado-aeroporto">Traslado do Aeroporto</option>
-                            <option value="passeios-adicionais">Passeios Turísticos Adicionais</option>
-                        </select>
+                        <legend>Serviços Adicionais</legend>
+                        <div class="dados">
+                            <div class="select-label"><label for="preferencias-servico">Escolha as opções desejadas:</label></div>
+                            <div class="select">
+                                <select id="preferencias-servico" name="preferencias-servico" multiple size="3">
+                                    <option value="servico-quarto">Serviço de Quarto</option>
+                                    <option value="traslado-aeroporto">Traslado do Aeroporto</option>
+                                    <option value="passeios-adicionais">Passeios Turísticos Adicionais</option>
+                                </select>
+                            </div>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="btn">

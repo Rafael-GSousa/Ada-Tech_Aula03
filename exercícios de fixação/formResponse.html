@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <h1>Dados do Formulário</h1>
+    <div id="dados-formulario"></div>
+
     <script>
         // Captura os parâmetros na URL
         const urlParams = new URLSearchParams(window.location.search);
@@ -15,6 +20,7 @@
             "nome",
             "data-partida",
             "numero-passageiros",
+            "origem",
             "destino",
             "email",
             "telefone",
@@ -25,12 +31,26 @@
             "preferencias-servico"
         ];
 
+        // Elemento onde os dados do formulário serão exibidos
+        const dadosFormulario = document.getElementById('dados-formulario');
+
         // Itera sobre os campos e exibe seus valores no console
         for (const campo of camposFormulario) {
             if (urlParams.has(campo)) {
                 console.log(`Campo: ${campo}, Valor: ${urlParams.get(campo)}`);
             }
         }
+
+        // Itera sobre os campos e exibe seus valores na página
+        for (const campo of camposFormulario) {
+            if (urlParams.has(campo)) {
+                const valor = urlParams.get(campo);
+                const paragrafo = document.createElement('p');
+                paragrafo.textContent = `${campo}: ${valor}`;
+                dadosFormulario.appendChild(paragrafo);
+            }
+        }
     </script>
 </body>
+
 </html>

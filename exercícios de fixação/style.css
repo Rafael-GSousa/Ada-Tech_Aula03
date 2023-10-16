@@ -5,10 +5,10 @@ body {
 }
 
 .header {
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     justify-content: space-evenly;
-    gap: 1%;
+    /* gap: 1%; */
     padding: 25px;
     height: 100px;
 
@@ -27,3 +27,30 @@ body {
     height: 100%;
     /* border-radius: 50%; */
 }
+
+.formulario {
+    width: 800px; 
+    margin: 0px auto;
+    background-color: bisque;
+}
+
+.formulario div {
+    margin: 5px;
+}
+.dados{
+    display: flex;
+    flex-wrap: nowrap;
+    /* margin: 10px ;    */
+    /* background-color: aqua; */
+    /* vertical-align: middle; */
+}
+
+.refeicao {
+    justify-content: space-around;
+}
+
+.rf {
+    display: flex;
+}
+
+
